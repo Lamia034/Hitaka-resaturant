@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Kaisei Decol' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <header >
+        <a href="#" ><img src="logo3.png" class="logo" alt=""></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="about.html" >About</a></li>
+            <li><a href="contact.html" >Contact</a></li>
+            <li><a href="menu3.html" >Menu</a></li>
+        </ul>
+    </header>
+    <!--home-->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1>Welcome to HITAKA restaurant</h1>
+        </div>
+    </section>
+    
+
+       <!--categories-->
+       <center>
+        <section class="categoryb">
+
+           <form >
+                <label><u><h2 >Menu</h2></u></label>
+                <select class="category">
+
+                  <option value="Select a category ..">Select a category ..</option>
+                  <option value="Sushis">Sushis</option>
+                  <option value="Salades">Salades</option>
+                  <option value="Desserts">Desserts</option>
+                  <option value="Drinks">Drinks</option>
+                </select>
+          </form>
+        </section>
+       </center>
+       <section class="bigmenu">
+      <div class="menu">
+          <div class="block">
+              <div class="card" id="item1">
+              <img src="menu1.jpg" class="img1"><p style="font-size:25px">  Sashimi :<br>
+                  -with eggs,mayess,fish</p>
+              <span class="price">25.5$</span><br>
+              <button  onclic()="addToCart(item1)">Ajouter au menu</button>
+              </div>
+          </div>
+
+              <div class="block">
+                  <div class="card" id="item2">
+                  <img src="menu2.jpg" class="img1">
+                  <p style="font-size:25px" >Sashimi :<br>
+                  -with eggs,mayess,fish</p>
+                  <span class="price" width="300px">25.5$</span><br>
+                  <button  onclic()="addToCart(item2)"> Ajouter au menu</button>
+                  </div>
+              </div>
+
+                  <div class="block">
+                      <div class="card" id="item3">
+                      <img src="menu6.webp" class="img1"><p style="font-size:25px">  Sashimi :<br>
+                      -with eggs,mayess,fish</p>
+                      <span class="price">25.5$</span><br>
+                      <button  onclic()="addToCart(item3)">Ajouter au menu</button>
+                  </div>
+              </div>
+                  <div class="block">
+                      <div class="card" id="item4">
+                      <img src="menu5.webp" class="img1">
+                      <p style="font-size:25px">Sashimi :<br>
+                      -with eggs,mayess,fish</p>
+                      <span class="price">25.5$</span><br>
+                      <button  onclic()="addToCart(item4)">Ajouter au menu</button>
+                      </div>
+                  
+      </div>
+  </div>
+
+      <div class="chosen" id="chosen">
+          <p style="font-size:26px;color:white">
+              Your chosen menu<br>
+              plats for today :
+          </p>
+          <hr>
+    
+          <input type="button" value="sum your command" placeholder="sum your command " class="som">
+        
+        </div>
+    </section>
+<!--footer--->
+<section id="contact">
+    <div class="footer">
+        <center>
+        <div class="main">
+            
+            <div class="list">
+                <h4><p>Phone :</p></h4>
+                <ul>
+                    <li><a href="#">+(123)-123-1234</a></li>
+                    <li><a href="#">+(123)-123-1234</a></li>
+                </ul>
+            </div>
+
+            <div class="list">
+                <h4>Adresses :</h4>
+                <ul>
+                    <li><a href="#">98 West 21th Street</a></li>
+                    <li><a href="#">New York NY 10016</a></li>
+                    <li><a href="#">Hitaka@gmail.com</a></li>
+                    
+                </ul>
+            </div>
+
+            <div class="list">
+                <h4>Links</h4>
+                <div class="social">
+                    <a href="#"><i class='bx bxl-facebook' ></i></a>
+                    <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+                    <a href="#"><i class='bx bxl-twitter' ></i></a>
+                    <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                </div>
+            </div>
+        </center>
+        </div>
+    </div>
+
+    <div class="end-text">
+        <p>Copyright ©2022 All rights reserved | HITAKA</p>
+    </div>
+</section>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
