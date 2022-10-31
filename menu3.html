@@ -38,14 +38,14 @@
 
            <form >
                 <label><u><h2 >Menu</h2></u></label>
-                <select class="category">
+                <select class="category" id="nom" onchange="show()">
 
-                  <option value="Select a category ..">Select a category ..</option>
-                  <option value="Sushis">Sushis</option>
-                  <option value="Salades">Salades</option>
-                  <option value="Desserts">Desserts</option>
-                  <option value="Drinks">Drinks</option>
-                </select>
+                  <option  value="Select a category ..">Select a category ..</option>
+                  <option  value="Sushis">Sushis</option>
+                  <option  value="Salades">Salades</option>
+                  <option  value="Desserts">Desserts</option>
+                  <option  value="Drinks">Drinks</option>
+                </select> 
           </form>
         </section>
        </center>
@@ -53,7 +53,7 @@
       <div class="menu">
           <div class="block">
               <div class="card" id="item1">
-              <img src="menu1.jpg" class="img1"><p style="font-size:25px">  Sashimi :<br>
+              <img src="menu1.jpg" class="img1"><p style="font-size:25px"> Sashimi :<br>
                   -with eggs,mayess,fish</p>
               <span class="price">25.5$</span><br>
               <button  onclic()="addToCart(item1)">Ajouter au menu</button>
@@ -142,6 +142,30 @@
         <p>Copyright ©2022 All rights reserved | HITAKA</p>
     </div>
 </section>
-<script type="text/javascript" src="js/script.js"></script>
+
+<script type="text/javascript">
+    function show(){
+        nom = document.getElementById("nom").value;
+        console.log(nom);
+        if(nom == "Sushis"){
+            document.getElementById("item2").style.display='block'
+            document.getElementById("item1").style.display='none'
+            document.getElementById("item3").style.display='none'
+            console.log("sushi");
+        }
+        else if(nom == "Salades"){
+            document.getElementById("item1").style.display='block'
+            document.getElementById("item2").style.display='none'
+            document.getElementById("item3").style.display='none'
+            console.log("salade");
+        }
+        else {
+            document.getElementById("item3").style.display='block'
+            document.getElementById("item2").style.display='none'
+            document.getElementById("item1").style.display='none'
+            console.log("else");
+        }
+    }
+</script>
 </body>
 </html>
