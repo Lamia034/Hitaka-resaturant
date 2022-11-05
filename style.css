@@ -6,6 +6,9 @@
     scroll-behavior: smooth;
     list-style-type:none;
 }
+
+
+
 header{
 	position: fixed;
     background-color: rgb(11,9,9,0.13);
@@ -182,12 +185,13 @@ text-align:justify;
 }*/
 .message form input:first-child{
 	display: inline-block;
-	width: 60%;
+	width: 50%;
 	padding: 20px 200px 20px 30px;
-	box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+	box-shadow: 50px 100px 300px rgb(85 85 85 / 20%);
 	outline: none;
 	border: none;
 	border-radius: 15px;
+	align-items:center;
 }
 .q1{
     background-color: black;
@@ -212,22 +216,23 @@ text-align:justify;
 
 }
 .bigmenu{
-	justify-content: space-between | space-around | space-evenly;
+	justify-content: space-between 100px;
 	display:inline-flex;
 	flex:wrap;
 	 flex-direction: row; 
 	/* justify-content: space-between; */
 	/* right:0px; */
 	/* left:0px; */
-	/* width:100%; */
-
+	 width:100%; 
+	grid-gap:10rem;
+	row-gap: 10rem;
 }
 .menu{
 	display:grid;
 	grid-template-columns: repeat(2,minmax(200px,auto));
-	grid-gap:2rem;
-	column-gap: 2rem;
-	row-gap: 2rem;
+	grid-gap:18rem;
+	column-gap: 10rem;
+	row-gap: 10rem;
 	float:left;
 }
 .block{
@@ -395,11 +400,15 @@ text-align:justify;
     width:200px;
 }
 
+.area{
+	height:800px;
+}
+
 .som{
     background-color:rgba(40, 221, 36, 1);    
 width: 90%;
 height: 10%;
-
+/* margin-left:6%; */
 border-radius: 0px 30px;
 color: white;
 font-weight: 2em;
@@ -498,7 +507,7 @@ border:none;
 }
 
 
-
+/*
 @media (max-width: 1400px){
 	header{
 		padding: 17px 3%;
@@ -512,7 +521,7 @@ border:none;
 		padding: 80px 3%;
 		transition: .2s;
 	}
-}
+}*/
 
 @media (max-width: 1040px){
 	#menu-icon{
@@ -651,12 +660,46 @@ border:none;
 		padding-left:20px;
 	
 	}
+
+	.bigmenu{
+		justify-content: space-between 100px;
+		display:inline-flex;
+		flex:wrap;
+		 flex-direction: row; 
+		/* justify-content: space-between; */
+		/* right:0px; */
+		/* left:0px; */
+		 width:100%; 
+		grid-gap:5rem;
+		row-gap: 5rem;
+	}
 	
-	
+	.menu{
+		
+		grid-template-columns: repeat(1,minmax(200px,auto));
+		grid-gap:5rem;
+		column-gap: 5rem;
+		row-gap: 5rem;
+		float:left;
+	}
+
+	.chosen{
+		background-color:#332020;
+		width:50px;
+		height:900px;
+		 float:right;
+	/*	margin-left:100px ;
+		margin-top:1%;
+		 
+		margin-top:685px;
+		margin-left:126px;
+		overflow-y:scroll;*/
+	}
+
 	}
 
 
-}
+
 .regform{
 	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.293046) 12.07%, rgba(0, 0, 0, 0.503261) 24.92%, rgba(0, 0, 0, 0.677843) 39.31%, #000000 57.87%);
 	width: 100%;
