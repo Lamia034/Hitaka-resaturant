@@ -402,6 +402,7 @@ text-align:justify;
 
 .area{
 	height:800px;
+	overflow-y: scroll;
 }
 
 .som{
@@ -484,9 +485,26 @@ border:none;
 
     background-color: #BDC017;
     color:white;
-    width:80px;
+    width:800px;
     height:20px;
 
+}
+.cart-price cart-column{
+	background-color: #BDC017;
+    color:white;
+    width:800px;
+    height:20px;
+}
+
+.cart-item-title{
+	color:white;
+}
+.cart-total-title{
+	color:white;
+	font-size: 2em;
+	width:600px;
+	background-color: #28DD24;
+	border-radius: 0px 10px;
 }
 
 .f1{
