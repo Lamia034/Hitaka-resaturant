@@ -1,3 +1,4 @@
+// navbar scroller
 const header = document.querySelector("header");
 
 window.addEventListener ("scroll", function() {
@@ -16,6 +17,9 @@ window.onscroll = () => {
 	menu.classList.remove('bx-x');
 	navbar.classList.remove('open');
 };
+
+
+//add to cart
 
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
@@ -44,11 +48,11 @@ function ready() {
 
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
-//  let t = $total;
+
 
 function purchaseClicked() {
    
-    alert(`Your order has been validated with total price :${updateCartTotal()}$`  )
+    alert(`Your order has been validated with total price :  ${updateCartTotal()}$ `)
     var cartItems = document.getElementsByClassName('cart-items')[0]
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)
@@ -106,7 +110,7 @@ function addItemToCart(title, price, imageSrc) {
     cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
 }
-
+// let t = total;
 function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName('cart-items')[0]
     var cartRows = cartItemContainer.getElementsByClassName('cart-row')
@@ -122,59 +126,181 @@ function updateCartTotal() {
     total = Math.round(total * 100) / 100
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
     return total;
-    
 }
 
 
 
 
+ //filter results
+
+function show(){
+   
+    
+
+   
+        let numb = document.getElementsByClassName("block").length;
+     var nom = document.getElementById('nom').value;
+      
+
+     if(nom == "Sushis"){
+       let numb1 = document.getElementsByClassName("sushi").length;
+       let rest = numb - numb1;
+       console.log(numb);
+       // var rest = numb2 - numb1;
+       // const collection = document.getElementsByClassName("sushi");
+       for (let i = 0; i < numb1; i++) {
+           document.getElementsByClassName("sushi")[i].style.display='block';
+       }
+     
+       for (let i = 0; i < rest; i++){
+           document.getElementsByClassName("salade")[i].style.display='none';
+           document.getElementsByClassName("dessert")[i].style.display='none';
+           document.getElementsByClassName("drink")[i].style.display='none';
+       }
+     }
+
+     else if(nom == "Salades"){
+       let numb1 = document.getElementsByClassName("salade").length;
+       let rest = numb - numb1;
+       console.log(numb);
+       // var rest = numb2 - numb1;
+       // const collection = document.getElementsByClassName("sushi");
+       for (let i = 0; i < numb1; i++) {
+           document.getElementsByClassName("salade")[i].style.display='block';
+       }
+     
+       for (let i = 0; i < rest; i++){
+           document.getElementsByClassName("sushi")[i].style.display='none';
+           document.getElementsByClassName("dessert")[i].style.display='none';
+           document.getElementsByClassName("drink")[i].style.display='none';
+       }
+     }
+
+     else if(nom == "Desserts"){
+       let numb1 = document.getElementsByClassName("dessert").length;
+       let rest = numb - numb1;
+       console.log(numb);
+       // var rest = numb2 - numb1;
+       // const collection = document.getElementsByClassName("sushi");
+       for (let i = 0; i < numb1; i++) {
+           document.getElementsByClassName("dessert")[i].style.display='block';
+       }
+     
+       for (let i = 0; i < rest; i++){
+           document.getElementsByClassName("sushi")[i].style.display='none';
+           document.getElementsByClassName("salade")[i].style.display='none';
+           document.getElementsByClassName("drink")[i].style.display='none';
+       }
+     }
+
+     else if(nom == "Drinks"){
+       let numb1 = document.getElementsByClassName("drink").length;
+       let rest = numb - numb1;
+       console.log(numb);
+       // var rest = numb2 - numb1;
+       // const collection = document.getElementsByClassName("sushi");
+       for (let i = 0; i < numb1; i++) {
+           document.getElementsByClassName("drink")[i].style.display='block';
+       }
+     
+       for (let i = 0; i < rest; i++){
+           document.getElementsByClassName("sushi")[i].style.display='none';
+           document.getElementsByClassName("salade")[i].style.display='none';
+           document.getElementsByClassName("dessert")[i].style.display='none';
+       }
+     }
+  
 
 
+}
 
+    //   else if(nom == "Salades"){
+    //     let numb1 = document.getElementsByClassName("salade").length;
+    //     let rest = numb - numb1;
+    //     console.log(numb);
+    //     // var rest = numb2 - numb1;
+    //     // const collection = document.getElementsByClassName("sushi");
+    //     for (let i = 0; i < numb1; i++) {
+    //         document.getElementsByClassName("salade")[i].style.display='block';
+    //     }
+      
+    //     for (let i = 0; i < rest; i++){
+    //         document.getElementsByClassName("sushi")[i].style.display='none';
+    //         document.getElementsByClassName("dessert")[i].style.display='none';
+    //         document.getElementsByClassName("drink")[i].style.display='none';
+    //     }
+    //   }
 
-/*
-//add to card 
-var addItemId = 0;
- function addToCart(item){
-	addItemId += 1;
-	var selectedItem = document.createElement('div');
-	selectedItem.classList.add('cartImg');
-	selectedItem.setAttribute('id',addItemId);
-	var img = document.getElement('img1');
-	img.setAttribute('src',item.children[0].currentSrc);
-	selectedItem.append(img1);
-	chosenItems.append(selectedItem);
- }
- */
+    //   else if(nom == "Desserts"){
+    //     let numb1 = document.getElementsByClassName("dessert").length;
+    //     let rest = numb - numb1;
+    //     console.log(numb);
+    //     // var rest = numb2 - numb1;
+    //     // const collection = document.getElementsByClassName("sushi");
+    //     for (let i = 0; i < numb1; i++) {
+    //         document.getElementsByClassName("dessert")[i].style.display='block';
+    //     }
+      
+    //     for (let i = 0; i < rest; i++){
+    //         document.getElementsByClassName("sushi")[i].style.display='none';
+    //         document.getElementsByClassName("salade")[i].style.display='none';
+    //         document.getElementsByClassName("drink")[i].style.display='none';
+    //     }
+    //   }
 
- //second try add to card
- /*
- var li_element = document.querySelectorAll(".category option");
-var item_elements = document.querySelectorAll(".card");
- for(var i = 0;i < option_elements.length; i++){
-	option_elements[i].addEventListener("click",function(){
-		option_elements.forEach(function(option)){
-			option.classList.remove("active");
-		}
-		this.classList.add("active");
-		var option_value = this.getAttribute("data-option");
-		item_elements.forEach(function(item)
-			item.style.display = "none";
-	})
-		if(option_value == "Sushis"){
-			document.querySelector("." + option_value).getElementsByClassName.display = "block";
-		}
-		else if(option_value == "Salades"){
-			document.querySelector("." + option_value).getElementsByClassName.display = "block";
-		}
-		else if(option_value == "Desserts"){
-			document.querySelector("." + option_value).getElementsByClassName.display = "block";
-		}
-		else if(option_value == "Drinks"){
-			document.querySelector("." + option_value).getElementsByClassName.display = "block";
-		}
-		else{
-			consolelog("");
-		}
-	})
- }*/
+    //   else if(nom == "Drinks"){
+    //     let numb1 = document.getElementsByClassName("drink").length;
+    //     let rest = numb - numb1;
+    //     console.log(numb);
+    //     // var rest = numb2 - numb1;
+    //     // const collection = document.getElementsByClassName("sushi");
+    //     for (let i = 0; i < numb1; i++) {
+    //         document.getElementsByClassName("drink")[i].style.display='block';
+    //     }
+      
+    //     for (let i = 0; i < rest; i++){
+    //         document.getElementsByClassName("sushi")[i].style.display='none';
+    //         document.getElementsByClassName("salade")[i].style.display='none';
+    //         document.getElementsByClassName("dessert")[i].style.display='none';
+    //     }
+    //   }
+   
+// }
+ 
+
+  // document.getElementsByClassName("sushi")[i].style.display='block';
+    //     // console.log(nom);
+  
+    //         for (let i = 0; i < numb; i++) {
+    //             document.getElementsByClassName("sushi")[i].style.display='block';
+    //         }
+    //         for (let i = 0; i < rest; i++) {
+    //             document.getElementsByClassName("sushi")[i].style.display='block';
+    //         }
+    //         document.getElementsByClassName("sushi").style.display='block'
+    //         document.getElementsByClassName("salade")[0].style.display='none'
+    //         document.getElementsByClassName("dessert")[0].style.display='none'
+    //         document.getElementsByClassName("drink")[0].style.display='none'
+    //         console.log("sushi");
+    //     }
+    //     else if(nom == "Salades"){
+    //         document.getElementsByClassName("salade")[0].style.display='block'
+    //         document.getElementsByClassName("sushi")[0].style.display='none'
+    //         document.getElementsByClassName("dessert")[0].style.display='none'
+    //         document.getElementsByClassName("drink")[0].style.display='none'
+    //         console.log("salade");
+    //     }
+    //     else if(nom == "Desserts") {
+    //         document.getElementsByClassName("dessert")[0].style.display='block'
+    //         document.getElementsByClassName("sushi")[0].style.display='none'
+    //         document.getElementsByClassName("salade")[0].style.display='none'
+    //         document.getElementsByClassName("drink")[0].style.display='none'
+    //         console.log("else");
+    //     }
+    //     else if(nom == "Drinks"){
+    //         document.getElementsByClassName("drink")[0].style.display='block'
+    //         document.getElementsByClassName("sushi")[0].style.display='none'
+    //         document.getElementsByClassName("salade")[0].style.display='none'
+    //         document.getElementsByClassName("dessert")[0].style.display='none'
+            
+    //     }
