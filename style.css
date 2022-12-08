@@ -67,7 +67,9 @@ header{
 .bx-menu:before {
     content: "\eb5f";
 }
-
+.shop-item-title{
+	font-size:1.6em;
+}
 
 .slider-frame{
     animation: change 10s infinite ease-in-out;
@@ -264,7 +266,20 @@ text-align:center;
 	width:70%;
 
 }
+.form1{
+	margin-top:50px;
+}
+.btn {
+	background-color:#800080;
+	border-radius:3px;
+	border:none;
+	height:30px;
+	width:100px;
+	color:white;
+	cursor: pointer;
+}
 .block{
+	margin-bottom:-70px;
     /* padding:20px; */
 	justify-content:space-between;
 	justify-content:space-around;
@@ -294,6 +309,10 @@ text-align:center;
     margin-top:685px;
     margin-left:126px;
     overflow-y:scroll;*/
+}
+.cart-items{
+	margin-top:5px;
+
 }
 
 .form2{
@@ -359,7 +378,7 @@ text-align:center;
 	color:white;
 	font-size:1.5em;
 	letter-spacing: 0.03em;
-	height:45px;
+	/* height:45px; */
 	width:120px;
 	border-radius:13px;
 	margin-right:	35%;
@@ -494,7 +513,9 @@ border:none;
 
     background-color: #BDC017;
     color:white;
-
+	width:70%;
+	text-align:center;
+	font-size:1.2em;
 
 }
 
@@ -656,10 +677,17 @@ text-align:center;
 	border:none;
 	}
 	.card img{
-		width:200px;
+		width:150px;
 		height:200px;
 	}
+	.chosen img{
+		width:100px;
+	}
+	.cart-quantity-input{
+		width:100px;
+	}
 	.block{
+		margin-bottom:-150px;
 		padding:5px;
 	}
 	.category{
@@ -686,6 +714,9 @@ text-align:center;
 		margin-top:685px;
 		margin-left:126px;
 		overflow-y:scroll;*/
+	}
+	.shop-item-title{
+		font-size:1em;
 	}
 	.menu{
 		display:grid;
@@ -748,9 +779,9 @@ text-align:center;
 	font-size:1.5em;
 	letter-spacing: 0.03em;
 	height:45px;
-	width:120px;
+	/* width:120px; */
 	border-radius:13px;
-	margin-right:	35%;
+	margin-right:	33%;
 	/*margin-left:343px;*/
 }
 #contact{
@@ -958,6 +989,7 @@ margin-bottom:5px;
 		display:flex;
 		/* justify-content:space-between; */
 		/* gap:-500px; */
+		gap:0%;
 		/* overflow-y: scroll; */
 		/* height:100vh; */
 		/* height:100px; */
@@ -979,6 +1011,22 @@ margin-bottom:5px;
 		/* height:900px; */
 		/* float:right; */
 		/* margin-left:130px ; */
+	}
+	.price{
+
+		background-color: #BDC017;
+		color:white;
+		width:140px;
+		text-align:center;
+		font-size:1.2em;
+	
+	}
+	.cart-total-title{
+		color:white;
+		font-size: 1em;
+		width:300px;
+		background-color: #28DD24;
+		border-radius: 0px 10px;
 	}
 	.form2 input{
 		width:200px;
